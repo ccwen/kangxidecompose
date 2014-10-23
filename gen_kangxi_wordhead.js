@@ -1,6 +1,7 @@
 var fs=require("fs");
 var filelist=fs.readFileSync("../kangxizidian/xml/kangxizidian.lst","utf8")
               .replace(/\r?\n/,"\n").split("\n");
+console.log('filelist.length',filelist.length);
 var count=0;
 var pat=/<wh .*?>(.*)<\/wh>/;
 var out=[];
