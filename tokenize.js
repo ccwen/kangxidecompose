@@ -1,7 +1,7 @@
 var isSpace=function(c) {
 	return (c==" ") || (c==",") || (c==".");
 }
-var isCJK =function(c) {return ((c>=0x3000 && c<=0x9FFF) 
+var isCJK =function(c) {return ((c>=0x2000 && c<=0x9FFF) 
 || (c>=0xD800 && c<0xDC00) || (c>=0xFF00) ) ;}
 var tokenize=function(s) {
 	var token='';
