@@ -96,7 +96,12 @@ out=Object.keys(P).map(function(e){var x;
 console.log('部件排序總數',out.length);
 fs.writeFileSync("kangxi_part3.csv",out.sort().join("\n"),'utf8');
 console.log('無碼部件總數',unknown.length);
-out=unknown.names.slice(1).map(function(e){
-	return '0x'+hex(P[e].length,3)+',"'+e+'","'+P[e].join(',')+'"';
+function demo(h){
+	return h+'='+kangxi_finalpart[h].join('').replace(/&.+?;|\?/g,function(m){return '(?'+unknown[m].toString(16)+')'})
+}
+out=unknown.names.slice(1).map(function(e,i){
+	var o='0x'+hex(P[e].length,3)+',"'+e+'","'+unknown.code[i+1]+'","';
+	if(P[e].length>1) o+=demo(P[e][0])+','+demo(P[e][1])+'","';
+	return o+P[e].join(',')+'"';
 }).sort();
 fs.writeFileSync("kangxi_unknownFreq3.csv",out.join("\n"),'utf8');
