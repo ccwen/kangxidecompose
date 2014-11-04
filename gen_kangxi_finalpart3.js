@@ -100,8 +100,10 @@ function demo(h){
 	return h+'='+kangxi_finalpart[h].join('').replace(/&.+?;|\?/g,function(m){return '(?'+unknown[m].toString(16)+')'})
 }
 out=unknown.names.slice(1).map(function(e,i){
-	var o='0x'+hex(P[e].length,3)+',"'+e+'","'+unknown.code[i+1]+'","';
-	if(P[e].length>1) o+=demo(P[e][0])+','+demo(P[e][1])+'","';
-	return o+P[e].join(',')+'"';
+	var n=1,o='0x'+hex(P[e].length,3)+',"'+e+'","'+unknown.code[i+1]+'","'+demo(P[e][0]);
+	if(P[e].length>1) o+='","'+demo(P[e][1]), n++;
+	if(P[e].length>2) o+='","'+demo(P[e][2]), n++;
+	if(P[e].length>n) o+='","'+P[e].slice(n,10).join(',');
+	return o+'"';
 }).sort();
 fs.writeFileSync("kangxi_unknownFreq3.csv",out.join("\n"),'utf8');
