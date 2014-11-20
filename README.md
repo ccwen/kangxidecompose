@@ -83,3 +83,6 @@ Variation Selectors Supplement
 
 4. gen\_kangxi\_finalpart3.js + kangxi\_finalpart.js (原字頭拆分表) + u2b.js (unicode 轉 big5)
     用以產生 kangxi_finalpart3.csv (46844 字頭拆分) + kangxi_part3.csv (1892 部件排序) + kangxi_partFreq3.csv (1260 部件排序) 
+
+5. gen\_kangxi\_finalpart4.js + kangxi_finalpart3.csv (46844 字頭拆分表去引號) + kangxi_part3.csv (1260 部件排序表保留兩欄並去引號)
+    用以產生 (46844 字頭拆分頁) kangxi_finalpart3.htm 及 kangxi_part3.htm (1260 部件排序頁)
