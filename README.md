@@ -86,3 +86,6 @@ Variation Selectors Supplement
 
 5. gen\_kangxi\_finalpart4.js + kangxi_finalpart3.csv (46844 字頭拆分表去引號) + kangxi_part3.csv (1260 部件排序表保留兩欄並去引號)
     用以產生 (46844 字頭拆分頁) kangxi_finalpart3.htm 及 kangxi_part3.htm (1260 部件排序頁)
+
+6. gen\_kangxi\_finalpart5.js + kangxi_finalpart3.csv (46844 字頭拆分表去引號) + kangxi_part3.csv (1260 部件排序表保留兩欄並去引號)
+    用以產生 (46844 字頭拆分頁) 字頭拆分依u碼排序nnnnnn.htm (每網頁1000筆, 例如: 字頭拆分依u碼排序003000.htm 為第三頁, 內容為第三組的1000筆資訊, 餘類推, 唯最後一頁 字頭拆分依u碼排序046844.htm 內容 844筆)

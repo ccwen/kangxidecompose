@@ -76,6 +76,9 @@ for(var i=0; i<K.length; i++){
 			p.forEach(function(c){ 				// 部件字符 unicode 整數值 c
 				e=enUnicode([c]);				// 部件字符 e
 				o.push(e), countPart(k,e);		// 部件字符 頻次 累計
+				var h=hex(c);
+				if(h==='25605')
+					console.log(i,k,u,parts,h)
 				o.push('u'+hex(c));			// 部件字符 代碼 U02e81 ~ U2f97a
 			})
 		}
